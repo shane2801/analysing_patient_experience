@@ -5,19 +5,19 @@ import csv
 
 path_to_start_urls = "" # path to file
 # read start urls from csv file that we scraped earlier using Selenium
-def get_start_urls(path):
-  start_urls = []
-  with open(path, 'r') as csv_file:
-    csv_reader = csv.reader(csv_file)
-    next(csv_reader)
-    for line in csv_reader:
-      start_urls.append(line[1])
-  print("Start urls found: ", len(start_urls))
-  return start_urls
+# def get_start_urls(path):
+#   start_urls = []
+#   with open(path, 'r') as csv_file:
+#     csv_reader = csv.reader(csv_file)
+#     next(csv_reader)
+#     for line in csv_reader:
+#       start_urls.append(line[1])
+#   print("Start urls found: ", len(start_urls))
+#   return start_urls
 
 class MyGPSpider(scrapy.Spider):
   name= 'myGpSpider'
-  start_urls = get_start_urls(path = path_to_start_urls)
+  # start_urls = get_start_urls(path = path_to_start_urls)
   # start_urls = [
   #   "https://www.nhs.uk/services/gp-surgery/abbey-dale-medical-centre/X39771"
   # ]

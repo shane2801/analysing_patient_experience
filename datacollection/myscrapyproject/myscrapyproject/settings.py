@@ -18,8 +18,8 @@ NEWSPIDER_MODULE = 'myscrapyproject.spiders'
 USER_AGENT = 'myscrapyproject (http://www.scrapy.org)'
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
-DOWNLOAD_DELAY = 0.5
+ROBOTSTXT_OBEY = False
+# DOWNLOAD_DELAY = 0.5
 HTTPCACHE_ENABLED = True
 AUTOTHROTTLE_ENABLED = True
 
@@ -48,15 +48,15 @@ AUTOTHROTTLE_ENABLED = True
 
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
-# SPIDER_MIDDLEWARES = {
-#    'myscrapyproject.middlewares.MyscrapyprojectSpiderMiddleware': 543,
-# }
+SPIDER_MIDDLEWARES = {
+   'myscrapyproject.middlewares.MyscrapyprojectSpiderMiddleware': 543,
+}
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
-# DOWNLOADER_MIDDLEWARES = {
-#    'myscrapyproject.middlewares.MyscrapyprojectDownloaderMiddleware': 543,
-# }
+DOWNLOADER_MIDDLEWARES = {
+   'myscrapyproject.middlewares.MyscrapyprojectDownloaderMiddleware': 543,
+}
 
 # Enable or disable extensions
 # See https://docs.scrapy.org/en/latest/topics/extensions.html
